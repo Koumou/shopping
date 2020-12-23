@@ -1,0 +1,86 @@
+  <nav class="navbar navbar-expand-md navbar-dark text-white bg-dark fixed-top">
+        <!-- <a class="navbar-brand" href="#" style="font-size: xx-large; ">Navbar</a> -->
+
+
+        <button class="navbar-toggler pt-0 pb-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- Left Side Of Navbar -->
+            <!-- <ul class="navbar-nav ml-auto">
+
+                    </ul> -->
+
+            <!-- Right Side Of Navbar -->
+            <div style="vertical-align:baseline;">
+                <a class="navbar-brand" href="#" style="font-size: xx-large; ">Shophome </a>
+
+                <ul class="navbar-nav text-xs-center">
+                    <!-- Authentication Links -->
+                    @guest
+                    <li class="nav-item">
+                        <a class="nav-link text-capitalize" href="">{{ __('Nouveautés') }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-capitalize" href="">{{ __('Tee-shirts et tops') }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-capitalize" href="">{{ __('Chemisiers et blouses') }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-capitalize" href="">{{ __('Pantalons') }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-capitalize" href="">{{ __('Robes') }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-capitalize" href="">{{ __('Jupes') }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-capitalize" href="">{{ __('Sacs') }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-capitalize" href="">{{ __('Accessoires') }}</a>
+                    </li>
+
+                    @if (Route::has('register'))
+                    @endif
+                    @else
+                    <li class="nav-item dropdown">
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            {{ Auth::user()->name }}
+                        </a>
+
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                {{ __('Logout') }}
+                            </a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
+                        </div>
+                    </li>
+                    @endguest
+
+                </ul>
+                <ul class="navbar-nav mr-auto" style="background-color:#FBD643">
+                    <!-- Authentication Links -->
+                    <li class="nav-item">
+                        <form class="form-inline">
+                         
+                            <div class="form-group mx-sm-3 mb-2">
+                                <label for="inputPassword2" class="sr-only">Password</label>
+                                <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+                            </div>
+                            <button type="submit" class="btn btn-primary mb-2">Confirm identity</button>
+                        </form>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+    </nav>
